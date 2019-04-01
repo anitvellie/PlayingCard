@@ -10,9 +10,25 @@ import UIKit
 
 class PlayingCardView: UIView {
     
-    var rank: Int = 5
-    var suit: String = "♥️"
-    var isFaceUp: Bool = true
+    var rank: Int = 5 {
+        didSet {
+            setNeedsDisplay() // redraw view
+            setNeedsLayout() // redraw subviews
+        }
+    }
+    var suit: String = "♥️" {
+        didSet {
+            setNeedsDisplay()
+            setNeedsLayout()
+        }
+    }
+    var isFaceUp: Bool = true {
+        didSet {
+            setNeedsDisplay()
+            setNeedsLayout()
+        }
+    }
+    
     
     private func centeredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
@@ -30,7 +46,38 @@ class PlayingCardView: UIView {
         return centeredAttributedString(rankString + "\n" + suit, fontSize: cornerFontSize)
     }
     
+    
+    
+    
+    private lazy var upperLeftCornerLabel: UILabel = createCornerLabel()
+    private lazy var lowerRightCornerLabel: UILabel = createCornerLabel()
+    
+    private func createCornerLabel() -> UILabel {
+        let label = UILabel()
+        label.numberOfLines = 0
+        addSubview(label)
+        return label
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        
+        upperLeftCornerLabel.frame.origin = bounds.origin.offsetBy(dx: cornerOffset, dy: cornerOffset)
+    }
+    
+    private func configureCornerLabel(_ label: UILabel) {
+        label.attributedText = cornerString
+        label.frame.size = CGSize.zero
+        label.sizeToFit()
+        label.isHidden = !isFaceUp
+    }
 
+    
+    
+    
+    
+    
+    
 
     override func draw(_ rect: CGRect) {
         
