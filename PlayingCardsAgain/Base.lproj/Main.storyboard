@@ -19,16 +19,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gDq-IX-u2p" customClass="playingCardView" customModule="PlayingCardsAgain" customModuleProvider="target">
-                                <rect key="frame" x="16" y="30" width="343" height="617"/>
+                                <rect key="frame" x="20" y="75.5" width="335" height="536"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" priority="750" constant="800" id="Dl3-sX-WCh"/>
+                                    <constraint firstAttribute="width" secondItem="gDq-IX-u2p" secondAttribute="height" multiplier="5:8" id="RWA-qV-o5J"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rank">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="suit" value="♥️"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.1857388616" blue="0.57339501380000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="1" green="0.84984259240000004" blue="0.91491837409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="gDq-IX-u2p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="9Sl-Gi-uNy"/>
-                            <constraint firstItem="gDq-IX-u2p" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="9Ss-ed-q27"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gDq-IX-u2p" secondAttribute="bottom" constant="20" id="hwf-ac-4Cd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gDq-IX-u2p" secondAttribute="trailing" constant="16" id="uNj-5h-fdl"/>
+                            <constraint firstItem="gDq-IX-u2p" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="4iK-OX-OQc"/>
+                            <constraint firstItem="gDq-IX-u2p" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9Sl-Gi-uNy"/>
+                            <constraint firstItem="gDq-IX-u2p" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="9Ss-ed-q27"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gDq-IX-u2p" secondAttribute="bottom" constant="20" id="hwf-ac-4Cd"/>
+                            <constraint firstItem="gDq-IX-u2p" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="kPN-Os-Icg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gDq-IX-u2p" secondAttribute="trailing" constant="20" id="uNj-5h-fdl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
