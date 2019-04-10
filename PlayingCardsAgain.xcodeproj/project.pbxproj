@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		991D1280225796F600232F5A /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D127F225796F600232F5A /* PlayingCardView.swift */; };
+		991D1284225E507A00232F5A /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 991D1283225E507A00232F5A /* PlayingCardView.swift */; };
 		99231CD4224936D8008072E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99231CD3224936D8008072E8 /* AppDelegate.swift */; };
 		99231CD6224936D8008072E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99231CD5224936D8008072E8 /* ViewController.swift */; };
 		99231CD9224936D8008072E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99231CD7224936D8008072E8 /* Main.storyboard */; };
@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		991D127F225796F600232F5A /* PlayingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayingCardView.swift; path = ../../../Downloads/PlayingCardView.swift; sourceTree = "<group>"; };
+		991D1283225E507A00232F5A /* PlayingCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
 		99231CD0224936D8008072E8 /* PlayingCardsAgain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingCardsAgain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		99231CD3224936D8008072E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		99231CD5224936D8008072E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,9 +66,9 @@
 				99231CDA224936D9008072E8 /* Assets.xcassets */,
 				99231CDC224936D9008072E8 /* LaunchScreen.storyboard */,
 				99231CDF224936D9008072E8 /* Info.plist */,
-				991D127F225796F600232F5A /* PlayingCardView.swift */,
 				99BC399E224BE60700C9271C /* PlayingCard.swift */,
 				99BC39A0224BECA500C9271C /* PlayingCardDeck.swift */,
+				991D1283225E507A00232F5A /* PlayingCardView.swift */,
 			);
 			path = PlayingCardsAgain;
 			sourceTree = "<group>";
@@ -144,10 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				991D1280225796F600232F5A /* PlayingCardView.swift in Sources */,
 				99231CD6224936D8008072E8 /* ViewController.swift in Sources */,
 				99BC39A1224BECA500C9271C /* PlayingCardDeck.swift in Sources */,
 				99BC399F224BE60700C9271C /* PlayingCard.swift in Sources */,
+				991D1284225E507A00232F5A /* PlayingCardView.swift in Sources */,
 				99231CD4224936D8008072E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
