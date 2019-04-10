@@ -2,14 +2,30 @@
 //  playingCardView.swift
 //  plaing cards
 //
-//  Created by Владимир Коваленко on 25/03/2019.
-//  Copyright © 2019 Владимир Коваленко. All rights reserved.
+//  Created by  on 25/03/2019.
+//  Copyright © 2019 . All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
 class PlayingCardView: UIView {
+    
+    var faceCardScale: CGFloat = SizeRatio.faceCardImageSizeToBoundsSize {
+        didSet {
+            setNeedsDisplay()
+        }
+    }
+    
+    @objc func adjustFaceCardScale(byHandlingGestureRecognizedBy recognizer: UIPinchGestureRecognizer) {
+        switch recognizer.state {
+        case .ended, .changed:
+            faceCardScale *= recognizer.scale
+            recognizer.scale = 1.0
+        default:
+            break
+        }
+    }
     
     @IBInspectable
     var rank: Int = 11 {
@@ -88,13 +104,10 @@ class PlayingCardView: UIView {
         roundedRect.addClip()
         UIColor.white.setFill()
         roundedRect.fill()
-        
         if isFaceUp {
             print(rankString + suit)
-            if let faceCardImage = UIImage(named: rankString + suit,
-                                           in: Bundle(for: self.classForCoder),
-                                           compatibleWith: traitCollection) {
-                faceCardImage.draw(in: bounds.zoom(by: SizeRatio.faceCardImageSizeToBoundsSize))
+            if let faceCardImage = UIImage(named: rankString + suit,in: Bundle(for: self.classForCoder), compatibleWith: traitCollection) {
+                faceCardImage.draw(in: bounds.zoom(by: faceCardScale))
             } else {
                 drawPips()
             }
